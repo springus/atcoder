@@ -2,11 +2,8 @@
 using namespace std;
 #define rep(i,n) for(int i=0;i<(n);++i)
 #define rrep(i,a,n) for(int i=a;i<(n);i++)
-#define drep(i,a,n) for(int i=a;i>=n;--i)
-#define lep(i,n) for(long long i=0;i<(n);++i)
 #define all(x) (x).begin(),(x).end()
 #define rall(x) (x).rbegin(),(x).rend()
-#define equals(a,b) (fabs((a)-(b))<eps)
 #define fi first
 #define se second
 #define pb push_back
@@ -27,8 +24,8 @@ const int dx[4]={1,0,-1,0};
 const int dy[4]={0,1,0,-1};
 const int inf=1001001001;
 const ll infl=100100100100100100;
-const double eps=(1e-10);
 const ll mod=1000000007;
+const int mx = 500050;
 template<class T> inline bool chmax(T& a, const T& b) { if (a < b) { a = b; return true; } return false; }
 template<class T> inline bool chmin(T& a, const T& b) { if (a > b) { a = b; return true; } return false; }
 template<typename T>
@@ -37,10 +34,6 @@ template<typename T>
 void coutarray(vc<T>& v) { rep(i, sz(v)) {if(i)cout << " "; cout << v[i];} cout << endl; }
 template<typename T>
 void coutmatrix(vc<vc<T> >& v) { rep(i,sz(v)) { rep(j, sz(v[i])) {cout << " "; cout << v[i][j]; } cout << "\n";} };
-#define yes { puts("Yes");}
-#define no { puts("No");}
-#define yn {puts("Yes");}else{puts("No");}
-const int mx = 500050;
 void _main();int main(){ios::sync_with_stdio(false);std::cin.tie(nullptr); _main();return 0;}
 
 void solve(){

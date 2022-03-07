@@ -1,9 +1,10 @@
 template<typename T>
 struct RMQ{
   //RPM:[0,n-1]の最小値を管理する
+  //0-index
   //update(i,x): i番目のの要素をxに更新O(logn)
-  //find(a,b)[x,b)で最小の要素を取得O(logn)
-  const T INF =pow(2,31)-1;
+  //find(a,b)[a,b)で最小の要素を取得O(logn)
+  const T INF =(1<<30)-1;
   int n;
   vector<T> Tree;
   RMQ(int n_): n(), Tree(n_*4,INF){
