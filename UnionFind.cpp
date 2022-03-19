@@ -1,6 +1,7 @@
-struct UnionFind{
+class UnionFind{
   vector<int> par;
-  UnionFind(int n=0):par(n,-1){}
+public:
+  UnionFind(int n=0){par.clear();par.resize(n,-1);}
   int root(int x){
     if(par[x]<0)return x;
     return par[x]=root(par[x]);//経路圧縮
