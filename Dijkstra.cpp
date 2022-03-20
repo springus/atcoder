@@ -1,9 +1,8 @@
-vector<long long> Dijkstra(vector<vector<pair<int,long long>>> &G,int s=0){
+vector<long long> Dijkstra(const vector<vector<pair<int,long long>>> &G,int s=0){
   int n=(int)G.size();
-  const long long infl=1e18;
   vector<long long > res(n,infl);
   res[s]=0;
-  priority_queue<pair<long long,int>, vector<pair<long long,int> >, greater<pair<long long,int> > > que;
+  priority_queue<pair<long long,int>,vector<pair<long long,int>>, greater<pair<long long,int>>> que;
   que.push(make_pair(0,s));
   while(que.size()){
     long long d=que.top().first;
